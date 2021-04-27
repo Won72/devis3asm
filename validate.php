@@ -90,7 +90,7 @@ if (isset($_POST['nom'])) {
 	$result = mysqli_query($bdd, $send);
   
   if($result == true){
-    echo "<script>document.location.href='http://localhost/devis/devis/devis_maison_ariane.php'; </script>"; //href="url de formulaire"  
+    echo "<script>document.location.href='http://3asm.fr/devis'; </script>"; //href="url de formulaire"  
   }else{
     echo 'Une erreur est survenue, veuillez contacter un webmaster';
     echo "<br><a href='index.php'>retour au formulaire</a>";
