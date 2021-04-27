@@ -67,7 +67,7 @@
             <select class="form-select" name="devis_metier" id="devis_metier" required>
 
                 <?php
-                    $$bdd = mysqli_connect("HoteFTP","idSQL","MotDePasseSQL","devis");
+                    $bdd = mysqli_connect("HoteFTP","idSQL","MotDePasseSQL","devis");
                     //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
                     //Services 3ASM
                     $findServiceSql = "SELECT * FROM `info_services`";
