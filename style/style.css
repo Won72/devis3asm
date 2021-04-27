@@ -1,0 +1,185 @@
+/*body*/
+
+/*header boot*/
+#header-w {
+  margin: 0;
+}
+
+.color-w {
+  background-color: rgba(1, 85, 148, 0.65);
+}
+
+.container-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+#logo-won {
+  width: 80%;
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+/*header navbar*/
+#navbarNav {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-item {
+  vertical-align: middle !important;
+}
+
+.textWhiteW {
+  color: white !important;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+.textWhiteW p {
+  margin-bottom: 0;
+}
+
+#nav-fb-w img {
+  width: 50px;
+  height: 40px;
+  object-fit: contain;
+  object-position: center;
+}
+
+#footer-img-logo-w {
+  width: 170px;
+  height: 66px;
+}
+
+/*image*/
+.image-w {
+  padding: 0;
+  margin: 0;
+}
+
+/*back ground bootstrap*/
+.bg-primary {
+  background-color: #6c757d !important;
+}
+
+.bg-secondary {
+  background-color: #0dcaf0 !important;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/*body list*/
+.text-primary-w {
+  color: #015594;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.no-border-w {
+  border: 0 !important;
+}
+
+/*footer bootstrap*/
+#div_footer_w {
+  background-color: #accce4;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.footer-wrapper-w {
+  padding-top: 20px;
+}
+
+.left-margin-w {
+  margin-left: 5%;
+}
+
+.right-margin-w {
+  margin-right: 5%;
+}
+
+.footer-bloc1 p {
+  font-size: 8px;
+  color: rgb(1, 85, 148);
+  margin-bottom: 0;
+}
+
+.footer-bloc2 p {
+  font-size: 12px;
+  color: rgb(1, 85, 148);
+  margin-bottom: 2px;
+  line-height: 1.5em;
+}
+.footer-bloc2 a {
+  text-decoration: none;
+}
+
+.footer-bold-w {
+  font-weight: bold;
+}
+
+.footer-wrapper-bas-w {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.footer-mention-w {
+  font-size: 10px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #015594;
+  margin: 0;
+}
+.footer-mention-w a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline-w {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+/*h1~h6*/
+h2 {
+  font-size: 1.5rem !important;
+}
+
+/*Page formulaire div*/
+.div_frequence {
+  display: none;
+}
+
+.div_form_seance_box {
+  display: none;
+}
+
+.div_form_seance {
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #069;
+}
+
+.span_form_seance1,
+.span_form_seance2 {
+  font-size: 110%;
+  font-weight: bold;
+  color: #993300;
+}
