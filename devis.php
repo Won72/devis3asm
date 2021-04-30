@@ -1,12 +1,14 @@
 <?php
+/*
     if(isset($_GET["idDevis"])) {
      $idDevis = $_GET["idDevis"];
   }
-  /*
+  */
+  
   if(isset($_COOKIE["idDevis"])) {
      $idDevis = $_COOKIE["idDevis"];
   }
-  */
+  
 
   //recuperer les donnees de mySQL
   include("bdd.php");

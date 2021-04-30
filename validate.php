@@ -91,7 +91,7 @@ if (isset($_POST['nom'])) {
 	$result = mysqli_query($bdd, $send);
   
   if($result == true){
-    echo "<script>document.location.href='devis3asm.fr/devis.php?idDevis=$num_devis'; </script>"; //href="url de formulaire"  //location
+    echo "<script>document.location.href='devis3asm.fr/devis.php'; </script>"; //href="url de formulaire"  //location
   }else{
     echo 'Une erreur est survenue, veuillez contacter un webmaster';
     echo "<br><a href='https://3asm.fr/'>retour au formulaire</a>";
