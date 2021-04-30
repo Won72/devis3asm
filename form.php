@@ -133,8 +133,8 @@
 
             foreach($rowFrequence as $frequence){
                 echo "<div class='form-check'>";
-                echo "<input id=" .htmlspecialchars($frequence[0]) ."name='frequence' type='radio' class='form-check-input' value=" .htmlspecialchars($frequence[0]). "data-semaine=".htmlspecialchars($frequence[2])." data-mois=".htmlspecialchars($frequence[3]).">";
-                echo "<label class='form-check-label' for=".htmlspecialchars($frequence[0]).">".htmlspecialchars($frequence[1])."</label>";
+                echo "<input id=$frequence[0] name='frequence' type='radio' class='form-check-input' value=$frequence[0] data-semaine=$frequence[2] data-mois=$frequence[3]>";
+                echo "<label class='form-check-label' for=$frequence[0]>$frequence[1]</label>";
                 echo "</div>";
             }
             ?>

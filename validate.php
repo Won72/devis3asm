@@ -8,15 +8,15 @@ if (isset($_POST['nom'])) {
   //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
   
   // on recupere les datas dans des variables
-  $nom = htmlspecialchars($_POST['nom']));
-  $prenom = htmlspecialchars($_POST['prenom']);
-  $adresse = htmlspecialchars($_POST['adresse']);
-  $agence = htmlspecialchars($_POST['agence']);
+  $nom = (($_POST['nom']));
+  $prenom = ($_POST['prenom']);
+  $adresse = ($_POST['adresse']);
+  $agence = ($_POST['agence']);
   $agence = strtoupper($agence);
-  $email =htmlspecialchars( $_POST['email']);
-  $devis_metier = htmlspecialchars($_POST['devis_metier']);
-  $programme = htmlspecialchars($_POST['programme']);
-  $frequence = htmlspecialchars($_POST['frequence']);
+  $email =( $_POST['email']);
+  $devis_metier = ($_POST['devis_metier']);
+  $programme = ($_POST['programme']);
+  $frequence = ($_POST['frequence']);
   $date_actuel = date("Y-m-d");
   $date_emission_fin = strtotime("+90 days");
   $date_emission_fin = date("Y-m-d", $date_emission_fin);
@@ -58,12 +58,12 @@ if (isset($_POST['nom'])) {
   $prixTotal = 0;
   if($programme=="suivi"){
     foreach ($row as $product){
-        $prixUnitaire = htmlspecialchars($product['9']);
+        $prixUnitaire = ($product['9']);
       }
       foreach ($rowFrequence as $freq){
-        $freqSem =htmlspecialchars($freq['1']);
-        $freqMois = htmlspecialchars($freq['2']);
-        $freqAnnee= htmlspecialchars($freq['3']);
+        $freqSem =($freq['1']);
+        $freqMois = ($freq['2']);
+        $freqAnnee= ($freq['3']);
       }
 
       $prixSem = $freqSem * $prixUnitaire;
@@ -73,8 +73,7 @@ if (isset($_POST['nom'])) {
       $prixTotal = $prixTotal + $prixAnnee;
   }else{
     foreach ($row as $product){
-      $prixUnitaire = htmlspecialchars($product['9']);
-      $freqActu=htmlspecialchars($product['7']);
+      $prixUnitaire = ($product['9']);
       $prixSem = 0;
       $prixMois = 0;
       $prixAnnee = $freqActu*$prixUnitaire;
@@ -91,6 +90,7 @@ if (isset($_POST['nom'])) {
 	$result = mysqli_query($bdd, $send);
   
   if($result == true){
+    //echo "<script>document.location.href='devis.php'; </script>";
     echo "<script>document.location.href='devis3asm.fr/devis.php'; </script>"; //href="url de formulaire"  //location
   }else{
     echo 'Une erreur est survenue, veuillez contacter un webmaster';

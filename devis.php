@@ -19,21 +19,21 @@
   $rowResultDevis = mysqli_fetch_all($resultFindDevisSql);
 
   foreach($rowResultDevis as $result){
-      $numDevis = htmlspecialchars($result['1']);
-      $nomClient = htmlspecialchars($result['2']);
-      $prenomClient = htmlspecialchars($result['3']);
-      $adresseClient = htmlspecialchars($result['4']);
-      $agenceChoisi = htmlspecialchars($result['5']);
-      $emailClient = htmlspecialchars($result['6']);
-      $metierChoisi = htmlspecialchars($result['7']);
-      $programmeChoisi = htmlspecialchars($result['8']);
-      $frequenceChoisi = htmlspecialchars($result['9']);
-      $dateEmissionFin = htmlspecialchars($result['10']);
-      $dateActuel = htmlspecialchars($result['11']);
-      $typeDevis = htmlspecialchars($result['12']);
-      $prixParMois = htmlspecialchars($result['14']);
-      $prixParAnnee = htmlspecialchars($result['15']);
-      $prixEnTotal = htmlspecialchars($result['16']);
+      $numDevis = ($result['1']);
+      $nomClient = ($result['2']);
+      $prenomClient = ($result['3']);
+      $adresseClient = ($result['4']);
+      $agenceChoisi = ($result['5']);
+      $emailClient = ($result['6']);
+      $metierChoisi = ($result['7']);
+      $programmeChoisi = ($result['8']);
+      $frequenceChoisi = ($result['9']);
+      $dateEmissionFin = ($result['10']);
+      $dateActuel = ($result['11']);
+      $typeDevis = ($result['12']);
+      $prixParMois = ($result['14']);
+      $prixParAnnee = ($result['15']);
+      $prixEnTotal = ($result['16']);
   }
   //Service SQL
   $findServiceSql = "SELECT * FROM `info_services` WHERE `typeClassification` = '".$typeDevis."'";
@@ -141,20 +141,20 @@
                         
                         foreach ($rowResultService as $service){
                         echo "<tr>";
-                        echo "<td class='text_left'>" .htmlspecialchars($service['1']) ." " .htmlspecialchars($service['2']) ."</td>";
-                        echo "<td>" .htmlspecialchars($service['3'])."</td>"; // unite
+                        echo "<td class='text_left'>" .($service['1']) ." " .($service['2']) ."</td>";
+                        echo "<td>" .($service['3'])."</td>"; // unite
                         if($programmeChoisi == "bilan"){
-                            echo "<td>" .htmlspecialchars($service['5'])."</td>"; // semaine
-                            echo "<td>" .htmlspecialchars($service['6'])."</td>";// mois
-                            echo "<td>" .htmlspecialchars($service['7'])."</td>"; // annee
+                            echo "<td>" .($service['5'])."</td>"; // semaine
+                            echo "<td>" .($service['6'])."</td>";// mois
+                            echo "<td>" .($service['7'])."</td>"; // annee
                         }else{
                             foreach($rowResultFrequence as $frequenceFE){
-                            echo "<td>" .htmlspecialchars($frequenceFE['2'])."</td>"; // semaine
-                            echo "<td>" .htmlspecialchars($frequenceFE['3'])."</td>";// mois
-                            echo "<td>" .htmlspecialchars($frequenceFE['4'])."</td>"; // annee
+                            echo "<td>" .($frequenceFE['2'])."</td>"; // semaine
+                            echo "<td>" .($frequenceFE['3'])."</td>";// mois
+                            echo "<td>" .($frequenceFE['4'])."</td>"; // annee
                             }
                         }
-                        echo "<td>" .htmlspecialchars($service['9'])." €"."</td>";//prix unitaire
+                        echo "<td>" .($service['9'])." €"."</td>";//prix unitaire
                         echo "<td>" .$prixParMois." €"."</td>";//Prix Mois
                         echo "<td>" .$prixParAnnee." €" ."</td>";//Prix Annee
                         echo "</tr>";
