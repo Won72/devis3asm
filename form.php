@@ -68,7 +68,6 @@
 
                 <?php
                 include ("bdd.php");
-                    //$bdd = mysqli_connect("localhost","root","kia1st","devis");
                     //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
                     //Services 3ASM
                     $findServiceSql = "SELECT * FROM `info_services`";

@@ -12,28 +12,27 @@
 
   //recuperer les donnees de mySQL
   include("bdd.php");
-  //$bdd = mysqli_connect("localhost","root","kia1st","devis");
   //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
   $findDevisSql = "SELECT * FROM devis_client WHERE numDevis = '".$idDevis."'";
   $resultFindDevisSql = mysqli_query($bdd, $findDevisSql);
   $rowResultDevis = mysqli_fetch_all($resultFindDevisSql);
 
   foreach($rowResultDevis as $result){
-      $numDevis = ($result['1']);
-      $nomClient = ($result['2']);
-      $prenomClient = ($result['3']);
-      $adresseClient = ($result['4']);
-      $agenceChoisi = ($result['5']);
-      $emailClient = ($result['6']);
-      $metierChoisi = ($result['7']);
-      $programmeChoisi = ($result['8']);
-      $frequenceChoisi = ($result['9']);
-      $dateEmissionFin = ($result['10']);
-      $dateActuel = ($result['11']);
-      $typeDevis = ($result['12']);
-      $prixParMois = ($result['14']);
-      $prixParAnnee = ($result['15']);
-      $prixEnTotal = ($result['16']);
+      $numDevis = htmlspecialchars($result['1']);
+      $nomClient = htmlspecialchars($result['2']);
+      $prenomClient = htmlspecialchars($result['3']);
+      $adresseClient = htmlspecialchars($result['4']);
+      $agenceChoisi = htmlspecialchars($result['5']);
+      $emailClient = htmlspecialchars($result['6']);
+      $metierChoisi = htmlspecialchars($result['7']);
+      $programmeChoisi = htmlspecialchars($result['8']);
+      $frequenceChoisi = htmlspecialchars($result['9']);
+      $dateEmissionFin = htmlspecialchars($result['10']);
+      $dateActuel = htmlspecialchars($result['11']);
+      $typeDevis = htmlspecialchars($result['12']);
+      $prixParMois = htmlspecialchars($result['14']);
+      $prixParAnnee = htmlspecialchars($result['15']);
+      $prixEnTotal = htmlspecialchars($result['16']);
   }
   //Service SQL
   $findServiceSql = "SELECT * FROM `info_services` WHERE `typeClassification` = '".$typeDevis."'";
