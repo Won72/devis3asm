@@ -77,7 +77,7 @@
                     
                     $arrayService = array();
                     foreach($rowService as $service){
-                        array_push($arrayService, $service[1]);
+                        array_push($arrayService, htmlspecialchars($service[1]));
                     }
                     $arrayUniqueService = array_unique($arrayService);
                     
@@ -87,7 +87,7 @@
                     $rowServiceBilan =  mysqli_fetch_all($resultFindServiceBilanSql);
                     $arrayServiceBilan = array();
                     foreach($rowServiceBilan as $serviceBilan){
-                        array_push($arrayServiceBilan, $serviceBilan[1]);
+                        array_push($arrayServiceBilan, htmlspecialchars($serviceBilan[1]));
                     }
                     $arrayUniqueServiceBilan =array_unique($arrayServiceBilan);
                     //Options Services
@@ -133,8 +133,8 @@
 
             foreach($rowFrequence as $frequence){
                 echo "<div class='form-check'>";
-                echo "<input id=$frequence[0] name='frequence' type='radio' class='form-check-input' value=$frequence[0] data-semaine=$frequence[2] data-mois=$frequence[3]>";
-                echo "<label class='form-check-label' for=$frequence[0]>$frequence[1]</label>";
+                echo "<input id=" .htmlspecialchars($frequence[0]) ."name='frequence' type='radio' class='form-check-input' value=" .htmlspecialchars($frequence[0]). "data-semaine=".htmlspecialchars($frequence[2])." data-mois=".htmlspecialchars($frequence[3]).">";
+                echo "<label class='form-check-label' for=".htmlspecialchars($frequence[0]).">".htmlspecialchars($frequence[1])."</label>";
                 echo "</div>";
             }
             ?>

@@ -1,3 +1,3 @@
 <?php
-    $bdd = mysqli_connect("localhost","root","kia1st","devis");
+    $bdd = mysqli_connect("adresseIP","compteMySQL","MDPSQL","devis");
 ?>
