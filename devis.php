@@ -12,7 +12,6 @@
 
   //recuperer les donnees de mySQL
   include("bdd.php");
-  //$bdd = mysqli_connect("localhost","root","kia1st","devis");
   //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
   $findDevisSql = "SELECT * FROM devis_client WHERE numDevis = '".$idDevis."'";
   $resultFindDevisSql = mysqli_query($bdd, $findDevisSql);
