@@ -7,14 +7,21 @@ body {
   flex-direction: row;
 }
 .wrapper {
-  width: 90%;
+  width: 1000px;
   margin: auto;
+  margin-top: 70px;
+  text-align: center;
 }
 
 .header_logo,
 .header_titre {
   display: flex;
   width: 50%;
+}
+
+.header_logo img {
+  width: 250px;
+  padding: 10px;
 }
 
 .header_titre {
@@ -30,10 +37,6 @@ body {
 }
 
 /**/
-
-#pdfDiv {
-  text-align: center;
-}
 
 /*flex*/
 .flex_wrapper {
@@ -51,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
+  justify-content: space-around;
 }
 
 .flex_center_align {
@@ -97,8 +101,11 @@ input {
 }
 
 .text_side_padding {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.text_bold {
+  font-weight: bold;
 }
 
 /*table*/

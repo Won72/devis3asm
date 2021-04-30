@@ -3,7 +3,8 @@
 if (isset($_POST['nom'])) {
   
   //mySQL connextion
-  $bdd = mysqli_connect("HoteFTP","idSQL","MotDePasseSQL","devis");
+  include ("bdd.php");
+  //$bdd = mysqli_connect("localhost","root","kia1st","devis");
   //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
   
   // on recupere les datas dans des variables
@@ -90,10 +91,10 @@ if (isset($_POST['nom'])) {
 	$result = mysqli_query($bdd, $send);
   
   if($result == true){
-    echo "<script>document.location.href='http://localhost/devis/devis/devis_maison_ariane.php'; </script>"; //href="url de formulaire"  
+    echo "<script>document.location.href='devis3asm.fr/devis.php?idDevis=$num_devis'; </script>"; //href="url de formulaire"  //location
   }else{
     echo 'Une erreur est survenue, veuillez contacter un webmaster';
-    echo "<br><a href='index.php'>retour au formulaire</a>";
+    echo "<br><a href='https://3asm.fr/'>retour au formulaire</a>";
   }
 }
   
