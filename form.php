@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6Leeac4aAAAAABg0sZcvlm3ahqhDO62gqeOK_ckY"></script>
 <form method="POST" action="validate.php">
 
     <hr class="my-4">
@@ -158,9 +159,22 @@
             </div>
         </div>
 
+        <input type="hidden" id="g-recaptcha" name="g-recaptcha">
+
 
 
         <hr class="my-4">
 
         <button class="w-100 btn btn-primary btn-lg" type="submit">Verifier le Devis</button>
 </form>
+
+<script type="text/javascript">
+grecaptcha.ready(function() {
+    grecaptcha.execute("6Leeac4aAAAAABg0sZcvlm3ahqhDO62gqeOK_ckY", {
+        action: "homepage"
+    }).then(function(token) {
+        // 토큰을 받아다가 g-recaptcha 에다가 값을 넣어줍니다.
+        document.getElementById("g-recaptcha").value = token;
+    });
+});
+</script>

@@ -1,5 +1,31 @@
 <?php
 // je verifie que le formulaire est bien envoyé
+
+$captcha = $_POST['g-recaptcha'];
+$secretKey = '6Leeac4aAAAAAA4nT6cUipGTxwqXPFnEESz9inrw'; // 위에서 발급 받은 "비밀 키"를 넣어줍니다.
+
+$data = array(
+  'secret' => $secretKey,
+  'response' => $captcha
+);
+
+$url = "https://www.google.com/recaptcha/api/siteverify";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+$response = curl_exec($ch);
+curl_close($ch);
+
+$responseKeys = json_decode($response, true);
+
+if ($responseKeys["success"]) {
+  // 스팸 검사가 통과 했을 때의 처리
+} else {
+  // 스팸 검사가 실패 했을 때의 처리
+}
+
 if (isset($_POST['nom'])) {
   
   //mySQL connextion
@@ -90,7 +116,7 @@ if (isset($_POST['nom'])) {
   
   if($result == true){
     //echo "<script>document.location.href='devis.php'; </script>";
-    echo "<script>document.location.href='devis3asm.fr/devis.php'; </script>"; //href="url de formulaire"  //location
+    echo "<script>document.location.href='https://devis3asm.fr/devis.php'; </script>"; //href="url de formulaire"  //location
   }else{
     echo 'Une erreur est survenue, veuillez contacter un webmaster';
     echo "<br><a href='https://3asm.fr/'>retour au formulaire</a>";
