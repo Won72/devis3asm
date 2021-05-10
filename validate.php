@@ -33,15 +33,15 @@ if (isset($_POST['nom'])) {
   //ex) $bdd = mysqli_connect("62.73.5.143","root","mdp1111","devis");
   
   // on recupere les datas dans des variables
-  $nom = htmlspecialchars(($_POST['nom']));
-  $prenom = htmlspecialchars($_POST['prenom']);
-  $adresse = htmlspecialchars($_POST['adresse']);
-  $agence = htmlspecialchars($_POST['agence']);
+  $nom = (($_POST['nom']));
+  $prenom = ($_POST['prenom']);
+  $adresse =($_POST['adresse']);
+  $agence = ($_POST['agence']);
   $agence = strtoupper($agence);
-  $email =htmlspecialchars( $_POST['email']);
-  $devis_metier = htmlspecialchars($_POST['devis_metier']);
-  $programme = htmlspecialchars($_POST['programme']);
-  $frequence = htmlspecialchars($_POST['frequence']);
+  $email =( $_POST['email']);
+  $devis_metier =($_POST['devis_metier']);
+  $programme = ($_POST['programme']);
+  $frequence = ($_POST['frequence']);
   $date_actuel = date("Y-m-d");
   $date_emission_fin = strtotime("+90 days");
   $date_emission_fin = date("Y-m-d", $date_emission_fin);
